@@ -1,0 +1,2 @@
+INSERT INTO users (username, pwd) VALUES ('Sid', 'sid123');
+INSERT INTO `users` (`id`, `username`, `pwd`, `created_at`) VALUES (NULL, 'muntaha', 'muntaha123', '2024-04-18 14:49:18')
