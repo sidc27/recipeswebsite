@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Website</title>
+    <title>Culinary Covee</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <h1>Recipe Website</h1>
+        <h1>Culinary Cove</h1>
 
         <nav>
             <ul>

@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Recipes</title>
+    <title>All Recipes</title>
     <link rel="stylesheet" href="userrecipes.css">
 </head>
 
 <body>
     <header>
-        <h1>Recipes</h1>
+        <h1>All Recipes</h1>
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
@@ -24,21 +24,45 @@
     </header>
 
     <main class="container">
-        <!-- Recipe Cards will be dynamically inserted here -->
-        <div class="recipe-card">
-           
 
-                <h2> Recipe Name: NAMEE</h2>
-                <h3>Description:</h3>
-                <h4>Write description here...</h4> 
-                <h3>Ingredients:</h3> 
-                <h4>List ingredients here...</h4>
-                <h3>Classification: vegan, vegetarian, pescatarian or none </h3>
-            
+        
+
+        <div class=recipe-card>
+
+            <?php
+            require_once "includes/dbh.inc.php";
+
+            try {
+                $query = "SELECT * FROM allrecipes";
+                $stmt = $pdo->query($query);
+
+                if ($stmt->rowCount() > 0) {
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                        echo "<p>Recipe Name: " . $row['recipeName'] . "</p>";
+                        echo "<p>Description: " . $row['recipeDescription'] . "</p>";
+                        echo "<p>Ingredients: " . $row['ingredients'] . "</p>";
+                        echo "<p>Classification: " . $row['classification'] . "</p>";
+
+                        
+
+                        echo "<hr>";
+                    }
+                } else {
+                    echo "No recipes found.";
+                }
+            } catch (PDOException $e) {
+                die("Query failed: " . $e->getMessage());
+            }
+
+            $pdo = null;
+            ?>
+
+
 
         </div>
 
 
+        </form>
     </main>
 
     <footer>

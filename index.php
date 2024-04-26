@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Recipe Website</h1>
+        <h1>Culinary Cove</h1>
 
         <nav>
             <ul>
@@ -25,7 +25,7 @@
     <main>
         <section>
             <div class="h1-homepage">
-            <h1 class="homepage-side">Welcome to our culinary oasis! Discover delectable recipes, culinary inspiration, 
+            <h1 class="homepage-side">Welcome to our culinary cove! Discover delectable recipes, culinary inspiration, 
                 and kitchen adventures right at your fingertips. Let's embark on a flavorful journey together! </h1>
             </div>
             <div class="homepage-image">
